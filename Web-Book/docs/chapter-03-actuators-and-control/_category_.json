@@ -1,0 +1,13 @@
+{
+  "label": "Chapter 3: Actuators and Control",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Learn about different types of actuators and basic control principles. Covers motor types, control signals, and servo systems. Understand how robots convert electrical energy into mechanical motion and how to control these systems effectively for precise movement."
+  },
+  "collapsed": false,
+  "customProps": {
+    "difficulty": "beginner",
+    "estimatedHours": 4
+  }
+}

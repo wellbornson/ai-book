@@ -1,0 +1,13 @@
+{
+  "label": "Chapter 5: Control Systems",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Advanced control theory and implementation for robotics. Learn PID control, state-space methods, and adaptive control techniques. Understand how to design feedback control systems that maintain stability and achieve desired robot behaviors under varying conditions."
+  },
+  "collapsed": false,
+  "customProps": {
+    "difficulty": "intermediate",
+    "estimatedHours": 5
+  }
+}

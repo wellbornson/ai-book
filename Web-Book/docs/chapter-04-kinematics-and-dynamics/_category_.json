@@ -1,0 +1,13 @@
+{
+  "label": "Chapter 4: Kinematics and Dynamics",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Mathematical foundations for robot motion and physics. Learn forward and inverse kinematics, dynamics equations, and how to calculate robot configurations. Understand the relationship between joint positions and end-effector poses, and how forces affect robot motion."
+  },
+  "collapsed": false,
+  "customProps": {
+    "difficulty": "intermediate",
+    "estimatedHours": 5
+  }
+}

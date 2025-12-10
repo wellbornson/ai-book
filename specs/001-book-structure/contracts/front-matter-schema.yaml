@@ -1,0 +1,180 @@
+# Docusaurus Lesson Front Matter Schema
+# Defines required and optional metadata for lesson Markdown files
+
+# JSON Schema representation
+$schema: http://json-schema.org/draft-07/schema#
+title: Lesson Front Matter
+description: Metadata schema for Docusaurus lesson pages
+type: object
+
+required:
+  - title
+  - sidebar_position
+  - description
+
+properties:
+  title:
+    type: string
+    description: Lesson title displayed in page header and sidebar
+    pattern: "^Lesson \\d+\\.\\d+: .+$"
+    minLength: 20
+    maxLength: 100
+    examples:
+      - "Lesson 1.1: What is Physical AI?"
+      - "Lesson 2.3: LiDAR, Depth, and Multimodal Sensing"
+
+  sidebar_position:
+    type: integer
+    description: Display order within chapter sidebar (1, 2, or 3)
+    minimum: 1
+    maximum: 3
+
+  description:
+    type: string
+    description: One-sentence summary for SEO and search results
+    minLength: 50
+    maxLength: 160
+    examples:
+      - "Introduction to physical AI concepts, applications, and distinctions from virtual AI systems."
+      - "Learn about distance measurement sensors including ultrasonic, infrared, LiDAR, and depth cameras."
+
+  tags:
+    type: array
+    description: Topic tags for search filtering and categorization
+    items:
+      type: string
+      pattern: "^[a-z-]+$"
+    minItems: 2
+    maxItems: 6
+    examples:
+      - ["introduction", "foundations", "physical-ai"]
+      - ["sensors", "perception", "lidar", "depth-cameras"]
+
+  sidebar_label:
+    type: string
+    description: Optional short label for sidebar (defaults to title if omitted)
+    maxLength: 50
+    examples:
+      - "What is Physical AI?"
+      - "LiDAR & Depth Sensors"
+
+  hide_title:
+    type: boolean
+    description: Hide page title in content (useful if using custom header)
+    default: false
+
+  hide_table_of_contents:
+    type: boolean
+    description: Hide the right sidebar table of contents
+    default: false
+
+  keywords:
+    type: array
+    description: SEO keywords (in addition to tags)
+    items:
+      type: string
+    maxItems: 10
+    examples:
+      - ["physical ai", "robotics", "humanoid robots", "ai agents"]
+
+  image:
+    type: string
+    description: Social media preview image (og:image)
+    format: uri-reference
+    examples:
+      - "/img/chapter-01/social-preview.png"
+
+  pagination_next:
+    type: string
+    description: Override next lesson link (default is sequential)
+    pattern: "^chapter-\\d{2}-[a-z-]+/lesson-\\d{2}-[a-z-]+$"
+    examples:
+      - "chapter-02-sensors/lesson-01-sensor-fundamentals"
+
+  pagination_prev:
+    type: string
+    description: Override previous lesson link
+    pattern: "^chapter-\\d{2}-[a-z-]+/lesson-\\d{2}-[a-z-]+$"
+
+  draft:
+    type: boolean
+    description: Mark lesson as draft (excluded from production builds)
+    default: false
+
+  unlisted:
+    type: boolean
+    description: Exclude from sidebar but keep accessible via direct URL
+    default: false
+
+  custom_edit_url:
+    type: string
+    description: Override default "Edit this page" link
+    format: uri
+
+# Custom properties for course-specific metadata
+  customProps:
+    type: object
+    description: Additional course-specific metadata
+    properties:
+      estimatedMinutes:
+        type: integer
+        description: Expected completion time in minutes
+        minimum: 30
+        maximum: 120
+
+      difficulty:
+        type: string
+        enum: ["beginner", "intermediate", "advanced"]
+        description: Lesson difficulty level
+
+      hasSafetyContent:
+        type: boolean
+        description: Whether lesson includes safety warnings
+        default: false
+
+      hasCodeExamples:
+        type: boolean
+        description: Whether lesson includes executable code
+        default: true
+
+      prerequisites:
+        type: array
+        description: Array of prerequisite lesson slugs
+        items:
+          type: string
+          pattern: "^chapter-\\d{2}-[a-z-]+/lesson-\\d{2}-[a-z-]+$"
+
+      assessmentType:
+        type: string
+        enum: ["quiz", "reflection", "mini-project", "mixed"]
+        description: Type of self-assessment included
+
+# Example complete front matter
+examples:
+  - title: "Lesson 1.1: What is Physical AI?"
+    sidebar_position: 1
+    description: "Introduction to physical AI concepts, real-world applications, and distinctions from virtual AI systems."
+    tags: ["introduction", "foundations", "physical-ai", "robotics"]
+    keywords: ["physical ai", "robotics", "embodied ai", "humanoid robots"]
+    image: "/img/chapter-01/lesson-01-preview.png"
+    customProps:
+      estimatedMinutes: 45
+      difficulty: "beginner"
+      hasSafetyContent: false
+      hasCodeExamples: false
+      prerequisites: []
+      assessmentType: "quiz"
+
+  - title: "Lesson 3.2: Motor Control and PWM"
+    sidebar_position: 2
+    description: "Learn Pulse Width Modulation for motor speed control, H-bridges, encoder feedback, and PID control basics."
+    tags: ["actuators", "motors", "pwm", "control", "pid"]
+    sidebar_label: "Motor Control & PWM"
+    customProps:
+      estimatedMinutes: 75
+      difficulty: "intermediate"
+      hasSafetyContent: true
+      hasCodeExamples: true
+      prerequisites:
+        - "chapter-03-actuators/lesson-01-actuator-types"
+      assessmentType: "mixed"
