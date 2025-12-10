@@ -1,6 +1,13 @@
 {
-  "buildCommand": "cd docusaurus && npm run build",
-  "devCommand": "cd docusaurus && npm run start",
-  "installCommand": "cd docusaurus && npm install",
-  "outputDirectory": "docusaurus/build"
+  "buildCommand": "npm run build",
+  "outputDirectory": "build",
+  "installCommand": "npm install",
+  "devCommand": "npm run start",
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/:path*",
+      "destination": "/index.html"
+    }
+  ]
 }
