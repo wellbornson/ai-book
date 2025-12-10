@@ -2,12 +2,6 @@
   "buildCommand": "npm run build",
   "outputDirectory": "build",
   "installCommand": "npm install",
-  "devCommand": "npm run start",
   "cleanUrls": true,
-  "rewrites": [
-    {
-      "source": "/:path*",
-      "destination": "/index.html"
-    }
-  ]
+  "trailingSlash": false
 }
