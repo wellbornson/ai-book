@@ -18,7 +18,7 @@ After completing this lesson, you will be able to:
 ## Prerequisites
 
 *   [Lesson 2.2: Vision Sensors and Image Processing](../chapter-02-sensors-and-perception/lesson-02-vision-sensors-and-image-processing.md)
-*   [Lesson 6.3: Localization and Mapping (SLAM Introduction)](./lesson-03-localization-and-mapping-slam-introduction.md)
+*   [Lesson 6.3: Localization and Mapping (SLAM Introduction)](../chapter-06-motion-planning/lesson-03-localization-and-mapping-slam-introduction.md)
 
 ## Theory Section
 

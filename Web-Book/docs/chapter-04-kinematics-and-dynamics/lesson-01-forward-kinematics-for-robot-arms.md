@@ -74,7 +74,7 @@ Trigonometry works for a 2-link arm, but it quickly becomes a nightmare for a 6-
 
 The solution is to use **transformation matrices**. A transformation matrix is a 4x4 matrix that can describe both the **rotation** and **translation** of one coordinate frame relative to another.
 
-A transformation matrix `T` from frame {A} to frame {B} looks like this:
+A transformation matrix `T` from frame `A` to frame `B` looks like this:
 
 ```
     | R R R T_x |
@@ -83,8 +83,8 @@ T = | R R R T_y |
     | 0 0 0 1   |
 ```
 
-(R = Rotation matrix part)
-(T = Translation vector part)
+- R = Rotation matrix part
+- T = Translation vector part
 
 The power of this approach is that we can chain transformations together using matrix multiplication. To get the transformation from the base `{0}` to the end-effector `{E}`, we can find the transformation for each joint and multiply them:
 

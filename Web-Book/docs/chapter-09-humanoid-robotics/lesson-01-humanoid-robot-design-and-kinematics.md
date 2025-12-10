@@ -17,7 +17,7 @@ After completing this lesson, you will be able to:
 
 ## Prerequisites
 
-*   [Lesson 4.1: Forward Kinematics for Robot Arms](../chapter-04-kinematics-and-kinematics-for-robot-arms.md)
+*   [Lesson 4.1: Forward Kinematics for Robot Arms](../chapter-04-kinematics-and-dynamics/lesson-01-forward-kinematics-for-robot-arms.md)
 *   [Lesson 8.1: Gripper Design and Force Control](../chapter-08-manipulation/lesson-01-gripper-design-and-force-control.md)
 
 ## Theory Section
