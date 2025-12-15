@@ -1,0 +1,13 @@
+{
+  "label": "Chapter 9: Humanoid Robotics",
+  "position": 9,
+  "link": {
+    "type": "generated-index",
+    "description": "Specialized topics in humanoid robot design and control. Learn bipedal locomotion, balance and stability principles, and human-robot interaction. Understand the unique challenges of creating robots with human-like form and capabilities, including walking, balancing, and social interaction."
+  },
+  "collapsed": false,
+  "customProps": {
+    "difficulty": "advanced",
+    "estimatedHours": 6
+  }
+}

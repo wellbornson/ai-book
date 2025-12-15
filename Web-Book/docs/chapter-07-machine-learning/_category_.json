@@ -1,0 +1,13 @@
+{
+  "label": "Chapter 7: Machine Learning for Robotics",
+  "position": 7,
+  "link": {
+    "type": "generated-index",
+    "description": "Apply machine learning techniques to robotic systems. Learn supervised learning for perception, reinforcement learning for control, and computer vision techniques. Understand how robots can learn from data and experience to improve their performance and capabilities."
+  },
+  "collapsed": false,
+  "customProps": {
+    "difficulty": "advanced",
+    "estimatedHours": 6
+  }
+}

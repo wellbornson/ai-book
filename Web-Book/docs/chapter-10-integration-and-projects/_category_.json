@@ -1,0 +1,13 @@
+{
+  "label": "Chapter 10: Integration and Final Projects",
+  "position": 10,
+  "link": {
+    "type": "generated-index",
+    "description": "Bring together all concepts in comprehensive projects. Learn system integration techniques, complete a capstone project combining multiple technologies, and explore future directions in physical AI and robotics. Synthesize knowledge from all previous chapters into working robotic systems."
+  },
+  "collapsed": false,
+  "customProps": {
+    "difficulty": "advanced",
+    "estimatedHours": 8
+  }
+}

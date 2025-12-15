@@ -1,0 +1,13 @@
+{
+  "label": "Chapter 8: Manipulation",
+  "position": 8,
+  "link": {
+    "type": "generated-index",
+    "description": "Grasping, object manipulation, and force control. Learn how robots interact with objects, grasp planning algorithms, force feedback control, and dexterous manipulation techniques. Understand the challenges of physical interaction and contact dynamics."
+  },
+  "collapsed": false,
+  "customProps": {
+    "difficulty": "advanced",
+    "estimatedHours": 5
+  }
+}
