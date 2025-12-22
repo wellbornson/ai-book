@@ -34,7 +34,10 @@ def create_app() -> FastAPI:
         title=settings.app_name,
         version=settings.app_version,
         debug=settings.debug,
-        lifespan=lifespan
+        lifespan=lifespan,
+        root_path="/api", # Critical for Vercel: tells FastAPI it's mounted at /api
+        docs_url="/docs", # Accessible at /api/docs
+        openapi_url="/openapi.json" # Accessible at /api/openapi.json
     )
 
     # Add CORS middleware
