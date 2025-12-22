@@ -5,6 +5,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
+import CuteClock from '@site/src/components/CuteClock';
 
 import styles from './index.module.css';
 
@@ -12,6 +13,7 @@ function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
+      <CuteClock />
       <div className={clsx("container", styles.heroContainer)}>
         <div className={styles.heroImage}>
             <img src="img/ai-robot.png" alt="AI Robot" className={styles.robotImage} />
