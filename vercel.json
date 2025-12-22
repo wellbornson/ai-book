@@ -9,18 +9,20 @@
       "src": "rag-chat-bot/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "build"
+        "distDir": "build",
+        "installCommand": "npm install",
+        "buildCommand": "npm run build"
       }
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/api/(.*)",
-      "dest": "backend/src/api/main.py"
+      "source": "/api/(.*)",
+      "destination": "backend/src/api/main.py"
     },
     {
-      "src": "/(.*)",
-      "dest": "/rag-chat-bot/$1"
+      "source": "/(.*)",
+      "destination": "/rag-chat-bot/$1"
     }
   ]
 }
