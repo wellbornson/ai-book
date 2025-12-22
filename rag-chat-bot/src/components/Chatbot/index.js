@@ -1,8 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styles from './styles.module.css'; // Assuming we'll add some CSS later
 
-const API_BASE_URL = 'http://localhost:8000/api/v1'; // FastAPI backend URL
-const DUMMY_TOKEN = 'your-dummy-auth-token'; // Replace with a real token mechanism if available
+// Determine API URL based on environment
+const isLocal = typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1');
+// If local, point to FastAPI port 8000. If production (Vercel), use relative path which is handled by Vercel rewrites.
+const API_BASE_URL = isLocal ? 'http://localhost:8000/api/v1' : '/api/v1'; 
+const DUMMY_TOKEN = 'test-token'; // Matches backend/src/config/settings.py default
 
 function Chatbot() {
   const [sessionId, setSessionId] = useState(null);
