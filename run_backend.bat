@@ -1,8 +1,7 @@
 @echo off
-echo Installing/upgrading necessary Python packages...
-pip install fastapi uvicorn
+echo Starting FastAPI application using local virtual environment...
 
-echo Starting FastAPI application...
-uvicorn backend.src.api.main:app --reload --host 0.0.0.0 --port 8000
+REM Use the python interpreter from the .venv directory
+".\.venv\Scripts\python.exe" -m uvicorn backend.src.api.main:app --reload --host 0.0.0.0 --port 8000
 
 pause

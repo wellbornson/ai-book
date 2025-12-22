@@ -6,6 +6,7 @@ import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
 import CuteClock from '@site/src/components/CuteClock';
+import TeacherGreeting from '@site/src/components/TeacherGreeting';
 
 import styles from './index.module.css';
 
@@ -14,6 +15,7 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <CuteClock />
+      <TeacherGreeting />
       <div className={clsx("container", styles.heroContainer)}>
         <div className={styles.heroImage}>
             <img src="img/ai-robot.png" alt="AI Robot" className={styles.robotImage} />
@@ -24,15 +26,18 @@ function HomepageHeader() {
             </Heading>
             <p className="hero__subtitle">{siteConfig.tagline}</p>
             <div className={styles.buttons}>
-            <Link
-                className="button button--secondary button--lg"
-                to="/docs/intro">
-                AI BOOK CREATED BY ZAHID IMAM
-            </Link>
-            </div>
-        </div>
-      </div>
-    </header>
+                                  <Link
+                                      className={clsx("button button--secondary button--lg", styles.mainButton)}
+                                      to="/docs/intro">
+                                      AI BOOK CREATED BY ZAHID IMAM
+                                  </Link>
+                                  </div>
+                                  <div className={styles.rollNumberBanner}>
+                                    ROLL NO 00129333
+                                  </div>
+                              </div>
+                            </div>
+                          </header>
   );
 }
 

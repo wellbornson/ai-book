@@ -62,6 +62,39 @@
   justify-content: flex-start; /* Align button to start with text */
 }
 
+.mainButton {
+  background-color: #006400 !important; /* Dark Green */
+  color: #ffffff !important;
+  border: none;
+  box-shadow: 0 4px 14px rgba(0, 100, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.mainButton:hover {
+  background-color: #004d00 !important; /* Even darker on hover */
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 100, 0, 0.6);
+}
+
+.rollNumberBanner {
+  margin-top: 1.5rem;
+  background-color: #FFB6C1; /* Light Pink */
+  color: #000000; /* Black */
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-weight: 900;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  display: inline-block;
+  box-shadow: 0 4px 10px rgba(255, 182, 193, 0.5);
+  animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
 @media screen and (max-width: 996px) {
   .buttons {
     justify-content: center;
