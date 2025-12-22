@@ -138,7 +138,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Physical AI & Humanoid Robotics Course. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} AI Robot Book. Made with 🤖 Love & ⚡ Electricity by Zahid Imam. (Beep Boop!)`,
     },
     prism: {
       theme: prismThemes.github,

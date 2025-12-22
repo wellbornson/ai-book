@@ -1,11 +1,40 @@
 .features {
   display: flex;
   align-items: center;
-  padding: 2rem 0;
+  padding: 4rem 0;
   width: 100%;
+  background: linear-gradient(180deg, var(--ifm-background-color) 0%, rgba(0, 255, 255, 0.05) 100%);
 }
 
 .featureSvg {
   height: 200px;
   width: 200px;
+  filter: drop-shadow(0 0 8px rgba(0, 255, 255, 0.4)); /* AI Glow for SVGs */
+  transition: transform 0.3s ease;
+}
+
+.featureCol {
+  padding: 1rem;
+}
+
+/* Card styling for each feature */
+.featureCard {
+  text-align: center;
+  padding: 2rem;
+  border-radius: 16px;
+  background: var(--ifm-card-background-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  height: 100%;
+  border: 1px solid transparent;
+}
+
+.featureCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 255, 255, 0.2);
+  border-color: rgba(0, 255, 255, 0.3);
+}
+
+.featureCard:hover .featureSvg {
+  transform: scale(1.1) rotate(5deg);
 }
