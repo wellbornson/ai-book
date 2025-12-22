@@ -21,7 +21,7 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
+            AI BOOK CREATED BY ZAHID IMAM
           </Link>
         </div>
       </div>
