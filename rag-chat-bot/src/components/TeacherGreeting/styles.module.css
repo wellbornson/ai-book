@@ -30,7 +30,7 @@
   font-size: 0.65rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #000;
+  color: #000000; /* Black */
   font-weight: bold;
   background: #ffff00; /* Yellow highlight */
   padding: 2px 6px;
@@ -41,14 +41,14 @@
 .names {
   font-size: 0.9rem;
   font-weight: 800;
-  color: #000000; /* Dark black */
+  color: #000000; /* Black */
   margin: 4px 0;
 }
 
 .thanks {
   font-size: 0.7rem;
   font-weight: bold;
-  color: #000;
+  color: #000000; /* Black */
   background: #00ffff; /* Cyan highlight */
   padding: 2px 6px;
   border-radius: 4px;
