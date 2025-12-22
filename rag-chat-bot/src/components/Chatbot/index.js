@@ -5,7 +5,9 @@ import styles from './styles.module.css'; // Assuming we'll add some CSS later
 const isLocal = typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1');
 // If local, point to FastAPI port 8000. If production (Vercel), use relative path which is handled by Vercel rewrites.
 const API_BASE_URL = isLocal ? 'http://localhost:8000/api/v1' : '/api/v1'; 
-const DUMMY_TOKEN = 'test-token'; // Matches backend/src/config/settings.py default
+
+// Retrieve token from login page, or fallback to default for testing
+const DUMMY_TOKEN = typeof window !== 'undefined' ? (localStorage.getItem('auth_token') || 'test-token') : 'test-token';
 
 function Chatbot() {
   const [sessionId, setSessionId] = useState(null);

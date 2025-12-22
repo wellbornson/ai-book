@@ -23,7 +23,7 @@ const config: Config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'wellbornsonAi', // Usually your GitHub org/user name.
-  projectName: 'Web-Book', // Usually your repo name.
+  projectName: 'ai-book', // Usually your repo name.
 
   onBrokenLinks: 'throw',
 
@@ -96,6 +96,17 @@ const config: Config = {
           href: 'https://github.com/wellbornsonAi/Web-Book',
           label: 'GitHub',
           position: 'right',
+        },
+        {
+          to: '/signin',
+          label: 'Sign In',
+          position: 'right',
+        },
+        {
+          to: '/signup',
+          label: 'Sign Up',
+          position: 'right',
+          className: 'button button--primary button--sm navbar-cta-button', // We will style this to look like a button
         },
       ],
     },
