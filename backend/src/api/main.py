@@ -1,3 +1,9 @@
+import sys
+import os
+
+# Add project root to sys.path to resolve 'backend' imports
+sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))))
+
 from fastapi import FastAPI
 from backend.src.config.settings import settings
 from backend.src.api import book_routes, chat_routes, query_routes

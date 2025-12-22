@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "backend/src/api/main.py",
+      "use": "@vercel/python"
+    },
+    {
+      "src": "rag-chat-bot/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "build"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "backend/src/api/main.py"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/rag-chat-bot/$1"
+    }
+  ]
+}
