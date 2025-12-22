@@ -10,14 +10,60 @@
   overflow: hidden;
 }
 
+.heroContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.heroImage {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  max-width: 40%;
+}
+
+.heroContent {
+  flex: 1;
+  text-align: left;
+}
+
+.robotImage {
+  max-height: 400px;
+  width: auto;
+  opacity: 0.85; /* Little transparent as requested */
+  filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.3)); /* Cool AI glow */
+}
+
 @media screen and (max-width: 996px) {
   .heroBanner {
     padding: 2rem;
+  }
+  
+  .heroContainer {
+    flex-direction: column;
+  }
+
+  .heroImage {
+    max-width: 80%;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+
+  .heroContent {
+    text-align: center;
   }
 }
 
 .buttons {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start; /* Align button to start with text */
+}
+
+@media screen and (max-width: 996px) {
+  .buttons {
+    justify-content: center;
+  }
 }

@@ -12,17 +12,22 @@ function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            AI BOOK CREATED BY ZAHID IMAM
-          </Link>
+      <div className={clsx("container", styles.heroContainer)}>
+        <div className={styles.heroImage}>
+            <img src="img/ai-robot.png" alt="AI Robot" className={styles.robotImage} />
+        </div>
+        <div className={styles.heroContent}>
+            <Heading as="h1" className="hero__title">
+            {siteConfig.title}
+            </Heading>
+            <p className="hero__subtitle">{siteConfig.tagline}</p>
+            <div className={styles.buttons}>
+            <Link
+                className="button button--secondary button--lg"
+                to="/docs/intro">
+                AI BOOK CREATED BY ZAHID IMAM
+            </Link>
+            </div>
         </div>
       </div>
     </header>
