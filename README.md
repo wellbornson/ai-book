@@ -1,10 +1,10 @@
 # 🤖 AI-BOOK | RAG Chatbot for Published Books
 
-[![Vercel Deployment](https://img.shields.io/badge/Vercel-Deployed-brightgreen?style=for-the-badge&logo=vercel)](https://ai-book-wellbornsons-projects.vercel.app)
+[![Vercel Deployment](https://img.shields.io/badge/Vercel-Deployed-brightgreen?style=for-the-badge&logo=vercel)](https://book-chatbot-silk.vercel.app/)
 
 ## 🌐 Live Demo
 **Click here to view the live project:**  
-👉 **[https://ai-book-wellbornsons-projects.vercel.app](https://ai-book-wellbornsons-projects.vercel.app)**
+👉 **[https://book-chatbot-silk.vercel.app/](https://book-chatbot-silk.vercel.app/)**
 
 ---
 
