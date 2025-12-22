@@ -1,102 +1,40 @@
-# Integrated RAG Chatbot for Published Book
+# 🤖 AI-BOOK | RAG Chatbot for Published Books
 
-This project implements an AI-powered chatbot that enables users to interact with published book content using Retrieval-Augmented Generation (RAG).
+[![Vercel Deployment](https://img.shields.io/badge/Vercel-Deployed-brightgreen?style=for-the-badge&logo=vercel)](https://ai-book-wellbornsons-projects.vercel.app)
 
-## Overview
+## 🌐 Live Demo
+**Click here to view the live project:**  
+👉 **[https://ai-book-wellbornsons-projects.vercel.app](https://ai-book-wellbornsons-projects.vercel.app)**
 
-The Integrated RAG Chatbot allows users to:
-- Query full book content with accurate, cited responses
-- Focus queries on user-selected text only
-- Get responses powered exclusively by Cohere's API
-- Experience fast, scalable, and maintainable interactions
+---
 
-## Core Features
+## 👨‍💻 Project Overview
+This is an AI-powered chatbot that allows users to interact with book content using **Retrieval-Augmented Generation (RAG)**. Created by **Zahid Imam** under the guidance of **Sir Ameen Alam** and **Sir Zia Khan**.
 
-- **Accurate Responses**: All answers are grounded in retrieved contexts from the book with citations
-- **Dual Mode Operation**: Support for both full-book queries and user-selected text only mode
-- **Cohere API Exclusivity**: Using Cohere's embed-english-v3.0/embed-multilingual-v3.0 and Command R/R+ models
-- **Scalable Architecture**: Built with FastAPI, Qdrant Cloud, and Neon Serverless Postgres
-- **Efficient Processing**: Optimized for large book content with proper chunking and overlap
+### ⚡ Key Features
+- **Smart RAG Chatbot:** Ask questions and get answers directly from the book.
+- **Cute AI Interface:** Featuring a floating digital clock and a futuristic AI assistant.
+- **Secure Authentication:** Fully functional Sign In and Sign Up pages.
+- **Teacher Tribute:** A special dedication to our mentors.
 
-## Technology Stack
+### 🛠️ Technology Stack
+- **Frontend:** Docusaurus (React/TypeScript)
+- **Backend:** FastAPI (Python)
+- **AI Brain:** Cohere AI (Embeddings & Generation)
+- **Vector DB:** Qdrant Cloud
+- **Hosting:** Vercel
 
-- **Backend**: FastAPI with async endpoints
-- **Embeddings**: Cohere embed-english-v3.0 or embed-multilingual-v3.0
-- **Generation**: Cohere Command R or R+ model with streaming
-- **Vector Database**: Qdrant Cloud (free tier)
-- **Relational DB**: Neon Serverless Postgres
-- **Orchestration**: LangChain for RAG chains and document loaders
-- **Code Style**: Python 3.11+, type hints, black formatting
+---
 
-## Getting Started
+## 🚀 How to Run Locally
 
-### Prerequisites
+### Backend
+1. Go to the `backend` folder.
+2. Run `.\run_backend.bat`.
 
-- Python 3.11+
-- Docker (optional, for containerized deployment)
-- Cohere API key
-- Qdrant Cloud account and API key
-- Neon Serverless Postgres account and connection string
+### Frontend
+1. Go to the `rag-chat-bot` folder.
+2. Run `npm install` and then `npm start`.
 
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone <repository-url>
-   cd <repository-name>
-   ```
-
-2. Create a virtual environment:
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-
-3. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. Create environment file:
-   ```bash
-   cp .env.example .env
-   ```
-
-5. Update `.env` with your credentials:
-   ```env
-   COHERE_API_KEY=your_cohere_api_key
-   QDRANT_URL=your_qdrant_url
-   QDRANT_API_KEY=your_qdrant_api_key
-   DATABASE_URL=your_neon_postgres_connection_string
-   ```
-
-### Running the Application
-
-1. Start the application:
-   ```bash
-   uvicorn backend.src.api.main:app --reload --port 8000
-   ```
-
-2. The API will be available at `http://localhost:8000`
-
-3. API documentation available at `http://localhost:8000/docs`
-
-## API Endpoints
-
-### Book Ingestion
-- `POST /api/v1/books/ingest` - Ingest a book for RAG processing
-
-### Chat Session Management
-- `POST /api/v1/sessions` - Create a new chat session
-- `GET /api/v1/sessions/{session_id}` - Get session details
-- `GET /api/v1/sessions/{session_id}/history` - Get chat history for a session
-
-### Query Processing
-- `POST /api/v1/query` - Submit a query about the book content
-- `POST /api/v1/sessions/{session_id}/select-text` - Update session to use selected text mode
-
-## Project Constitution
-
-This project follows the principles outlined in the [Project Constitution](.specify/memory/constitution.md).
-"# book-chatbot" 
-"# rag-chat" 
+---
+**Created with ❤️ by Zahid Imam (Roll No. 00129333)**
