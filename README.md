@@ -99,3 +99,4 @@ The Integrated RAG Chatbot allows users to:
 
 This project follows the principles outlined in the [Project Constitution](.specify/memory/constitution.md).
 "# book-chatbot" 
+"# rag-chat" 

@@ -88,6 +88,11 @@ const config: Config = {
           label: 'Course Content',
         },
         {
+          to: '/chatbot',
+          label: 'Chatbot',
+          position: 'left',
+        },
+        {
           href: 'https://github.com/wellbornsonAi/Web-Book',
           label: 'GitHub',
           position: 'right',
