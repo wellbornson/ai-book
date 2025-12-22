@@ -28,3 +28,22 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* Custom Sign Up Button Styling */
+.navbar-cta-button {
+  background-color: #000000 !important; /* Black background */
+  color: #ffffff !important; /* White text */
+  font-weight: bold !important;
+  font-size: 1rem !important; /* Made it a bit bigger */
+  border-radius: 8px !important;
+  margin-left: 10px;
+  border: none !important;
+  transition: all 0.3s ease;
+}
+
+.navbar-cta-button:hover {
+  background-color: #333333 !important; /* Slightly lighter on hover */
+  transform: scale(1.05);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  text-decoration: none !important;
+}
