@@ -1,6 +1,6 @@
 from typing import List, Dict, Any, Tuple
 from pathlib import Path
-import PyPDF2
+import pypdf
 import tiktoken
 from backend.src.services.qdrant_client import qdrant_client
 from backend.src.services.cohere_client import cohere_client
@@ -79,7 +79,7 @@ class IngestionService:
         """
         try:
             with open(file_path, 'rb') as file:
-                pdf_reader = PyPDF2.PdfReader(file)
+                pdf_reader = pypdf.PdfReader(file)
                 text = ""
                 for page_num in range(len(pdf_reader.pages)):
                     page = pdf_reader.pages[page_num]
