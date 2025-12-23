@@ -4,6 +4,7 @@ cohere
 qdrant-client
 sqlalchemy
 asyncpg
+aiosqlite
 pydantic
 pydantic-settings
 uvicorn
