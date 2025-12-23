@@ -8,6 +8,8 @@ from fastapi import FastAPI
 from backend.src.config.settings import settings
 from backend.src.api import book_routes, chat_routes, query_routes
 from backend.src.utils.error_handler import setup_error_handlers
+from backend.src.config.database import engine, Base
+from backend.src.models import ChatSession, BookContent, UserQuery, RetrievedContext, GeneratedResponse
 from contextlib import asynccontextmanager
 from typing import AsyncGenerator
 from fastapi.middleware.cors import CORSMiddleware
@@ -17,8 +19,17 @@ from fastapi.middleware.cors import CORSMiddleware
 async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
     # Startup
     print("Starting up RAG Chatbot for Published Book...")
-
-    # Any startup tasks can go here
+    
+    try:
+        # Create database tables
+        print("Initializing database...")
+        async with engine.begin() as conn:
+            await conn.run_sync(Base.metadata.create_all)
+        print("Database tables created successfully.")
+    except Exception as e:
+        print(f"CRITICAL ERROR during startup: {str(e)}")
+        import traceback
+        traceback.print_exc()
 
     yield
 
@@ -30,12 +41,17 @@ def create_app() -> FastAPI:
     """
     Create and configure FastAPI application
     """
+    # Determine root path based on environment
+    # In Vercel production, the app is behind a proxy that strips /api or handles rewrites
+    # Locally, we run directly on the port, so no root_path is needed
+    root_path = "/api" if settings.environment == "production" else ""
+
     app = FastAPI(
         title=settings.app_name,
         version=settings.app_version,
         debug=settings.debug,
         lifespan=lifespan,
-        root_path="/api", # Critical for Vercel: tells FastAPI it's mounted at /api
+        root_path=root_path, # Critical for Vercel: tells FastAPI it's mounted at /api
         docs_url="/docs", # Accessible at /api/docs
         openapi_url="/openapi.json" # Accessible at /api/openapi.json
     )

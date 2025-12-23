@@ -1,10 +1,12 @@
 from pydantic_settings import BaseSettings
+from pydantic import Field
 from typing import Optional
 
 
 class Settings(BaseSettings):
     # Database settings
-    database_url: str = "postgresql+asyncpg://user:password@localhost/dbname"
+    # We use APP_DATABASE_URL to avoid conflicts with global DATABASE_URL env vars
+    database_url: str = Field(alias="APP_DATABASE_URL", default="sqlite+aiosqlite:///./book_chatbot.db")
 
     # Cohere settings
     cohere_api_key: str
